@@ -414,6 +414,7 @@ public class WireMockConfiguration implements Options {
                 .withAcceptors(jettyAcceptors)
                 .withAcceptQueueSize(jettyAcceptQueueSize)
                 .withRequestHeaderSize(jettyHeaderBufferSize)
+                .withResponseHeaderSize(jettyHeaderBufferSize)
                 .withStopTimeout(jettyStopTimeout)
                 .build();
     }
