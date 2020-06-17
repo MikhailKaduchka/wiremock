@@ -25,8 +25,8 @@ allprojects {
     apply plugin: 'scala'
     apply plugin: 'project-report'
 
-    group = 'com.github.tomakehurst'
-    version = '2.26.3'
+    group = 'com.github.tomakehurst.mikhailkaduchka'
+    version = '2.26.3-local-version'
 
     sourceCompatibility = 1.7
     targetCompatibility = 1.7

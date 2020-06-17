@@ -70,3 +70,17 @@ installation.
 
 Then edit the module settings. Remove the "null" Source & Test source folders
 from all modules. Add `wiremock` as a module dependency to Java 7 & Java 8.
+
+
+Install into local repo
+-----------------------
+Build with JDK8
+```bash
+./gradlew -c release-settings.gradle clean :java8:build
+```
+
+Install jar into local dir
+```bash
+cd repo_dir
+mvn install:install-file -DgroupId=com.github.tomakehurst.mikhailkaduchka -DartifactId=wiremock-jre8 -Dversion=2.26.3-local-version -Dfile=/Users/mikhail/projects/tmp/wiremock/java8/build/libs/wiremock-jre8-2.26.3-local-version.jar -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=.  -DcreateChecksum=true -Dsources=/Users/mikhail/projects/tmp/wiremock/java8/build/libs/java8-2.26.3-local-version-sources.jar -Djavadoc=/Users/mikhail/projects/tmp/wiremock/java8/build/libs/java8-2.26.3-local-version-javadoc.jar -DpomFile=/Users/mikhail/projects/tmp/wiremock/java8/pom.xml
+```
